@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Гайд: ИИ-модели в Notion бесплатно · Gashihhhh</title>
+<style>
+:root{--bg:#0b0b12;--card:#14141f;--line:#262638;--text:#ececf4;--muted:#9a9ab0;--acc:#8b5cf6;--ok:#22c55e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f6fb;--card:#fff;--line:#e2e2ee;--text:#16162a;--muted:#62627a}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:32px 18px 64px}
+.tag{display:inline-block;font-size:13px;color:var(--acc);border:1px solid var(--acc);border-radius:99px;padding:2px 12px}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.15;margin:14px 0 10px}
+h1 span{color:var(--ok)}
+.lead{color:var(--muted);margin:0 0 18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips b{font-weight:600;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px 12px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:12px 0;margin-top:22px}
+.bar .row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:6px}
+.bar button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:3px 12px;cursor:pointer;font:inherit}
+.track{height:6px;background:var(--line);border-radius:9px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--ok));transition:width .3s}
+h2{font-size:22px;margin:34px 0 12px}
+.step{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer}
+.step.done{opacity:.6}
+.step.done .t{text-decoration:line-through}
+.step input{width:20px;height:20px;margin-top:3px;accent-color:var(--ok);flex:none}
+.step .body{flex:1;min-width:0}
+.step img{display:block;max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);margin-top:10px}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.ready{display:none;margin-top:28px;padding:20px;border-radius:14px;border:1px solid var(--ok);background:var(--card)}
+.ready.show{display:block}
+.ready h3{margin:0 0 6px;color:var(--ok)}
+.foot{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+.foot h3{color:var(--text);margin:0 0 6px}
+.seller{display:inline-block;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.35);color:var(--acc);font-size:13px;font-weight:700;padding:4px 12px;border-radius:99px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="tag">Бесплатный старт</span>
+  <h1>Гайд: ИИ в Notion <span>без оплаты</span></h1>
+  <p class="lead">Пошаговая инструкция: регистрация, выбор плана и работа с ИИ-моделями прямо в Notion.</p>
+  <div class="chips"><b>GPT</b><b>Claude</b><b>Gemini</b><b>+ другие</b></div>
+
+  <div class="bar">
+    <div class="row"><span id="cnt">0 / 0</span><button id="reset" type="button">Сброс</button></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+
+  <h2>1. Регистрация аккаунта</h2>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Откройте <a href="https://www.notion.so" target="_blank" rel="noopener">официальный сайт Notion</a>.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Создайте аккаунт через почту или другой доступный способ входа.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Подтвердите почту, если Notion попросит.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">При настройке рабочего пространства выберите <b>For work</b>.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Завершите первоначальную настройку.</div></div></label>
+
+  <h2>2. Выбор плана</h2>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Откройте главный экран Notion после регистрации.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Нажмите на значок шестерёнки в левом нижнем углу, рядом с колокольчиком.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Нажмите <b>Upgrade plan</b>.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Выберите <b>Free</b> и нажмите «Продолжить бесплатно».</div><div class="note">Business — это пробный период на 30 дней с переходом к шагу оплаты (Billing). Если решите пробовать его, отмените подписку до конца пробного периода.</div></div></label>
+
+  <h2>3. Работа с ИИ</h2>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">На главном экране найдите поле <b>Ask Notion AI…</b></div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Нажмите на переключатель <b>Auto</b> рядом с кнопкой отправки, чтобы открыть список моделей.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Выберите нужную модель, если она доступна, или оставьте <b>Auto</b>.</div></div></label>
+  <label class="step"><input type="checkbox"><div class="body"><div class="t">Введите запрос и отправьте его. Если доступны агенты — откройте их параметры, задайте инструкции и сохраните.</div></div></label>
+
+  <div class="ready" id="ready">
+    <h3>Готово — можно пользоваться ИИ в Notion</h3>
+    <div>Доступные модели, функции и лимиты зависят от плана и настроек вашего аккаунта.</div>
+  </div>
+
+  <div class="foot">
+    <div class="seller">Gashihhhh</div>
+    <h3>Спасибо, что дошли до конца!</h3>
+    <div>Материал справочный и не связан с компанией Notion.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='notion-guide-gashihhhh-v1',boxes=[].slice.call(document.querySelectorAll('.step input'));
+  var cnt=document.getElementById('cnt'),fill=document.getElementById('fill'),ready=document.getElementById('ready');
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(boxes.map(function(b){return b.checked})))}catch(e){}}
+  function render(){
+    var n=0;boxes.forEach(function(b){b.closest('.step').classList.toggle('done',b.checked);if(b.checked)n++});
+    cnt.textContent=n+' / '+boxes.length;fill.style.width=(n/boxes.length*100)+'%';
+    ready.classList.toggle('show',n===boxes.length);
+  }
+  var s=load();boxes.forEach(function(b,i){b.checked=!!s[i];b.addEventListener('change',function(){save();render()})});
+  document.getElementById('reset').addEventListener('click',function(){boxes.forEach(function(b){b.checked=false});save();render()});
+  document.querySelectorAll('.step a').forEach(function(a){a.addEventListener('click',function(e){e.stopPropagation()})});
+  render();
+})();
+</script>
+</body>
+</html>
